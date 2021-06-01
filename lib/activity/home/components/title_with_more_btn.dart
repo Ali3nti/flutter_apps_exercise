@@ -23,11 +23,12 @@ class TitleWithMoreBtn extends StatelessWidget {
           ),
           Spacer(),
           OutlinedButton(
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    ),
-                  ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
+              shape: MaterialStateProperty.all(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              ),
+            ),
             onPressed: press,
             child: Text(
               "more",
@@ -66,7 +67,7 @@ class TitleWithCustomUnderLine extends StatelessWidget {
             right: 0,
             left: 0,
             child: Container(
-              margin: EdgeInsets.only(right: kDefultPadding /20),
+              margin: EdgeInsets.only(right: kDefultPadding / 20),
               height: 7,
               color: kPrimaryColor.withOpacity(0.2),
             ),

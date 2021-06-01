@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'components/body.dart';
-
 
 class MiCard extends StatelessWidget {
   @override

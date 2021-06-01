@@ -12,7 +12,11 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           ImageAndIcons(size: size),
-          TitleAndPrice(title: "Alfredo", country: "Tachar", price: 10,),
+          TitleAndPrice(
+            title: "Alfredo",
+            country: "Tachar",
+            price: 10,
+          ),
           SizedBox(
             height: kDefultPadding,
           ),
@@ -23,12 +27,15 @@ class Body extends StatelessWidget {
                 height: 84,
                 child: OutlinedButton(
                   style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(kPrimaryColor),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
                     ),
-                  ),),
                   ),
                   onPressed: () {},
                   child: Text(

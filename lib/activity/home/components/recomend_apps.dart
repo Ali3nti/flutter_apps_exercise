@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_apps_exercise/activity/apps/mi_card/mi_card.dart';
 import 'package:flutter_apps_exercise/activity/apps/who_am_i/who_am_i.dart';
 import 'package:flutter_apps_exercise/activity/details/details_screen.dart';
 
@@ -37,7 +38,7 @@ class RecommendsApps extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WhoAmI(),
+                    builder: (context) => MiCard(),
                   ));
             },
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_apps_exercise/activity/apps/mi_card/mi_card.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
@@ -14,7 +15,7 @@ class HeaderWithSearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: kDefultPadding*2.5),
+      margin: EdgeInsets.only(bottom: kDefultPadding * 2.5),
       height: size.height * 0.2,
       child: Stack(
         children: <Widget>[
@@ -24,7 +25,6 @@ class HeaderWithSearchBox extends StatelessWidget {
               right: kDefultPadding,
               bottom: 36 + kDefultPadding,
             ),
-
             height: size.height * 0.2 - 27,
             decoration: BoxDecoration(
               color: kPrimaryColor,
@@ -41,10 +41,20 @@ class HeaderWithSearchBox extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
-                Image.asset("assets/images/user5.png",
-                  height: 56,
-                  width: 56,
-                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MiCard(),
+                        ));
+                  },
+                  child: Image.asset(
+                    "assets/images/user5.png",
+                    height: 56,
+                    width: 56,
+                  ),
+                )
               ],
             ),
           ),
